@@ -6,7 +6,7 @@ import { createConnection } from "mysql2/promise"
 export const ensureDbExists = async () => {
     const connection = await createConnection({
         host: "localhost",
-        port: 3308,
+        port: 3306,
         user: "root",
         password: "",
         })
@@ -15,7 +15,7 @@ export const ensureDbExists = async () => {
 export const AppDataSource = new DataSource({
     type: "mysql",
     host: "localhost",
-    port: 3308,
+    port: 3306,
     username: "root",
     password: "",
     database: "node-mysql-crud-api",
